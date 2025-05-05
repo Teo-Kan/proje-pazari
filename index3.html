@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEOKAN - İnovasyon Pazarı</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; overflow-x: hidden; }
+    nav {
+      position: fixed;
+      width: 100%;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      transition: transform 0.6s ease;
+      width: 400%;
+    }
+
+    section {
+      width: 100vw;
+      height: 100vh;
+      padding: 100px 20px 20px 20px;
+      overflow-y: auto;
+    }
+
+    #anasayfa { background: #f2f2f2; }
+    #patentli { background: #d3f8e2; }
+    #icat { background: #e4c1f9; }
+    #ortak { background: #f694c1; }
+
+    .ilan-kart {
+      background: white;
+      padding: 15px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a onclick="scrollToSection(0)">Ana Sayfa</a>
+    <a onclick="scrollToSection(1)">Patentli Fikirler</a>
+    <a onclick="scrollToSection(2)">İcat Satışı</a>
+    <a onclick="scrollToSection(3)">Ortaklık</a>
+  </nav>
+
+  <div class="container" id="pageContainer">
+    <section id="anasayfa">
+      <h2>Ana Sayfa</h2>
+      <p>Hoş geldiniz! Yenilikçi projelerinizi paylaşın veya yatırım yapın.</p>
+    </section>
+
+    <section id="patentli">
+      <h2>Patentli Fikirler</h2>
+      <div class="ilan-kart">
+        <h3>Akıllı Su Tasarruf Cihazı</h3>
+        <p>Musluk başına takılarak %30 su tasarrufu sağlar. Patent devri mümkündür. Fiyat: 25.000 TL</p>
+      </div>
+      <div class="ilan-kart">
+        <h3>Enerji Üreten Yol Taşı</h3>
+        <p>Üzerinden geçen araçlarla elektrik üreten taş sistemi. Patent satışı: 50.000 TL</p>
+      </div>
+    </section>
+
+    <section id="icat">
+      <h2>İcat Satışı</h2>
+      <p>Patenti olsun ya da olmasın, icatlarınızı burada sergileyebilirsiniz.</p>
+    </section>
+
+    <section id="ortak">
+      <h2>Ortaklık Arayan İş Fikirleri</h2>
+      <p>Yüksek teknoloji ve sıra dışı projelere ortak arayan girişimciler burada yer alır.</p>
+    </section>
+  </div>
+
+  <script>
+    function scrollToSection(index) {
+      const container = document.getElementById("pageContainer");
+      container.style.transform = `translateX(-${index * 100}vw)`;
+    }
+  </script>
+</body>
+</html>
