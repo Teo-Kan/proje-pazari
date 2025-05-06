@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEOKAN | Ana Sayfa</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #111; color: white; padding: 15px; display: flex; align-items: center; justify-content: space-between; }
+    nav { background-color: #222; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .content { padding: 20px; }
+    .menu { display: none; position: absolute; top: 60px; left: 10px; background: #333; color: white; padding: 10px; border-radius: 5px; }
+    .menu a { color: white; display: block; margin: 5px 0; text-decoration: none; }
+    .hamburger { font-size: 24px; cursor: pointer; }
+  </style>
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1>TEOKAN</h1>
+  </header>  <div id="menu" class="menu">
+    <a href="#">Hesabım</a>
+    <a href="#">Ayarlar</a>
+    <a href="#">Hakkımızda</a>
+  </div>  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="patentli-fikirler.html">Patentli Fikirler</a>
+    <a href="icat-satisi.html">İcat Satışı</a>
+    <a href="ortaklik.html">Ortaklık</a>
+  </nav>  <div class="content">
+    <h2>Hoş Geldiniz</h2>
+    <p>TEOKAN platformu, yenilikçi fikirlerin, icatların ve girişimlerin hayat bulduğu bir pazardır.</p><h3>İcatlar</h3>
+<p>Henüz piyasada olmayan, özel olarak geliştirilmiş yeni ürünlerdir. Örnek: elektrikli uçan motosiklet, lazerli böcek kovucu, otomatik kargo taşıyıcı robot.</p>
+
+<h3>Patentli Fikirler</h3>
+<p>Resmi patent korumasına sahip fikirlerdir. Fikir sahipleri, patent belgelerini yükleyerek projelerini yatırımcılara sunabilir.</p>
+
+<h3>İcat Satışı</h3>
+<p>İcatların ya da prototiplerin doğrudan satıldığı alandır. Patentli veya patentsiz olabilir. Patentsiz ürünlerde uyarı bulunur.</p>
+
+<h3>Ortaklık & İş Fikirleri</h3>
+<p>Girişimcilerin yatırımcı aradığı, iş fikrine ortaklık teklif edildiği bölümdür. Örnek: jet motoru üretimi için fabrika açma teklifi, yerli mikroçip üretimi planı vb.</p>
+
+<p>Site üzerinden yapılan iş birlikleri, ister ürün satışıyla ister şirket hissesi paylaşımıyla yürütülebilir.</p>
+
+  </div>
+</body>
+</html>
