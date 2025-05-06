@@ -1,101 +1,29 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html><html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TEOKAN | İcat & Ortaklık Pazarı</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEOKAN | Ana Sayfa</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body, html {
-      height: 100%;
-      font-family: Arial, sans-serif;
-      overflow-x: hidden;
-    }
-    .menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #1a1a1a;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-      z-index: 10;
-    }
-    .menu button {
-      background: none;
-      border: none;
-      color: white;
-      font-size: 16px;
-      margin: 0 15px;
-      cursor: pointer;
-      transition: color 0.3s;
-    }
-    .menu button:hover {
-      color: #ffcc00;
-    }
-    .container {
-      display: flex;
-      width: 400%;
-      height: 100vh;
-      transition: transform 0.6s ease-in-out;
-    }
-    .section {
-      flex: 1 0 100%;
-      padding: 60px 20px 20px;
-      overflow-y: auto;
-    }
-    .section:nth-child(1) { background: #f3f3f3; }
-    .section:nth-child(2) { background: #e6f2ff; }
-    .section:nth-child(3) { background: #fff2e6; }
-    .section:nth-child(4) { background: #f9e6ff; }
-
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-    p {
-      max-width: 700px;
-      line-height: 1.6;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background-color: #111; color: white; padding: 15px; display: flex; align-items: center; justify-content: space-between; }
+    nav { background-color: #222; display: flex; justify-content: center; gap: 20px; padding: 10px 0; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .content { padding: 20px; }
+    .menu { display: none; position: absolute; top: 60px; left: 10px; background: #333; color: white; padding: 10px; border-radius: 5px; }
+    .menu a { color: white; display: block; margin: 5px 0; text-decoration: none; }
+    .hamburger { font-size: 24px; cursor: pointer; }
   </style>
-</head>
-<body>
-
-  <div class="menu">
-    <button onclick="goToSection(0)">Ana Sayfa</button>
-    <button onclick="goToSection(1)">Patentli Fikirler</button>
-    <button onclick="goToSection(2)">İcat Satışı</button>
-    <button onclick="goToSection(3)">Ortaklık</button>
-  </div>
-
-  <div class="container" id="container">
-    <div class="section">
-      <h1>Ana Sayfa</h1>
-      <p>TEOKAN'a hoş geldiniz! Yenilikçi fikirlerinizi paylaşın, yatırımcılarla buluşun, patentli icatları sergileyin ve büyük projelere ortak olun.</p>
-    </div>
-    <div class="section">
-      <h2>Patentli Fikirler</h2>
-      <p>Kullanıcıların patentli fikirlerini sergilediği ve sabit fiyatla ya da açık artırmayla satışa sunduğu bölümdür. Patent devri isteğe bağlıdır.</p>
-    </div>
-    <div class="section">
-      <h2>İcat Satışı</h2>
-      <p>Patentli veya patentsiz icatlar bu alanda satılabilir. İcat hakkında görseller ve açıklamalarla birlikte ilanlar burada yer alır.</p>
-    </div>
-    <div class="section">
-      <h2>Yenilikçi İş Fikri & Ortaklık</h2>
-      <p>Yeni teknoloji, ulaşım, savunma, havacılık gibi alanlarda iş fikri sunan girişimciler, yatırım ve ortaklık teklifleri alabilir.</p>
-    </div>
-  </div>
-
   <script>
-    function goToSection(index) {
-      document.getElementById('container').style.transform = `translateX(-${index * 100}vw)`;
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
   </script>
-
-</body>
-</html>
+</head>
+<body>
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <h1>TEOKAN</h1>
+  </header>  <div id="menu" class="menu">
+    <a href="#">Hesabım</a>
+    <a href="#">Ayarlar
